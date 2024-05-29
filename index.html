@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bookshelf Apps</h1>
+
+        <form id="bookForm">
+            <input type="text" id="title" placeholder="Judul" required>
+            <input type="text" id="author" placeholder="Penulis" required>
+            <input type="number" id="year" placeholder="Tahun" required>
+            <label>
+                <input type="checkbox" id="isComplete"> Selesai dibaca
+            </label>
+            <button type="submit">Tambahkan Buku</button>
+            <input type="text" id="searchInput" placeholder="Cari berdasarkan judul...">
+        </form>
+
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookshelfList"></div>
+
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookshelfList"></div>
+    </div>
+
+    <div id="deleteDialog" class="dialog">
+        <div class="dialog-content">
+            <p>Apakah Anda yakin untuk menghapus buku ini?</p>
+            <button id="confirmDelete">Ya</button>
+            <button id="cancelDelete">Tidak</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
